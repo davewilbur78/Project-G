@@ -70,3 +70,9 @@ All modules follow the **Genealogical Proof Standard (GPS)** developed by the Bo
 - Evidence: Direct, Indirect, or Negative
 
 No genealogical data, citations, people, dates, or places are ever fabricated.
+
+---
+
+## About
+
+Project-G is a private, single-user platform for an aspiring professional genealogist working toward BCG certification. It enforces the Genealogical Proof Standard across all research activities and serves as the working and documentation layer alongside Ancestry.com and FamilyTreeMaker. It is not a product and is not for distribution.
