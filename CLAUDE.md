@@ -76,3 +76,9 @@ Phase 5: Case Study Builder with PowerPoint export as flagship feature
 - Ancestry stays the tree; this platform is the working and documentation layer
 - The Greene/Greenspun family line is an active unsolved research project — do not use as a test case
 - The platform integrates with an existing Ashkenazi DNA genealogy workflow
+
+## Claude Code Instructions
+
+Always work in /Users/dave/project-g/. 
+Prepend cd /Users/dave/project-g && to every bash command.
+Never write files to any other directory.
