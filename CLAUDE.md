@@ -2,9 +2,9 @@
 
 ## What This Is
 
-Project-G is a personal, private web application for serious hobbyist genealogical research. It is built for one user only and will never be distributed or sold. It is a working layer that sits on top of existing tools like Ancestry.com and FamilyTreeMaker — not a replacement for them.
+Project-G is a personal, private web application supporting serious genealogical research and professional development. It is built for one user only and will never be distributed or sold. It is a working layer that sits on top of existing tools like Ancestry.com and FamilyTreeMaker — not a replacement for them.
 
-The platform is a suite of modular research tools that help an experienced hobbyist genealogist work with professional-grade methodology without formal training. Everything in this system follows the Genealogical Proof Standard (GPS) developed by the Board for Certification of Genealogists, but translated into plain language.
+The platform is a suite of modular research tools that help an aspiring professional genealogist actively working toward BCG (Board for Certification of Genealogists) certification apply professional-grade methodology in daily research practice. This platform is part of that professional development path. Everything in this system follows the Genealogical Proof Standard (GPS) developed by the Board for Certification of Genealogists, but translated into plain language.
 
 ## The Modules
 
@@ -52,8 +52,8 @@ The following Steve Little prompts are used as internal engines inside our modul
 
 ## Build Path
 
-Phase 1: Documentation and architecture (current phase)
-Phase 2: Prototype artifacts in Claude.ai to test interview logic
+Phase 1: Documentation and architecture (complete)
+Phase 2: Prototype artifacts in Claude.ai to test interview logic (active — current phase)
 Phase 3: Full web app built module by module via Claude Code
 Phase 4: GEDCOM Bridge built as onboarding layer
 Phase 5: Case Study Builder with PowerPoint export as flagship feature
@@ -72,7 +72,7 @@ Phase 5: Case Study Builder with PowerPoint export as flagship feature
 ## Important Context
 
 - The user has years of existing research in Ancestry.com and FamilyTreeMaker
-- The user is not a formally trained genealogist but works at an advanced hobbyist level
+- The user is an aspiring professional genealogist actively working toward BCG certification
 - Ancestry stays the tree; this platform is the working and documentation layer
 - The Greene/Greenspun family line is an active unsolved research project — do not use as a test case
 - The platform integrates with an existing Ashkenazi DNA genealogy workflow
