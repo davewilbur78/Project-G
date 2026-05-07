@@ -1,3 +1,28 @@
+---
+Project-G CLAUDE.md
+Version: 2.0
+Last updated: 2026-05-07 UTC
+---
+
+## Operating Model
+
+This file is the single source of truth for Project-G. 
+It lives in the GitHub repository at:
+https://github.com/davewilbur78/Project-G/blob/main/CLAUDE.md
+
+The Claude.ai project instructions box contains only a 
+pointer to this file. All actual instructions live here.
+
+Every time this file is updated, the version number 
+increments and the Last updated timestamp is refreshed 
+to the current date in UTC. Claude Code is responsible 
+for updating the timestamp and version on every commit 
+that changes this file.
+
+When Claude reads this file at the start of a conversation, 
+it should confirm the version and date out loud so the 
+user knows exactly which version is being used.
+
 # Project-G: Personal Genealogy Operations Platform
 
 ## What This Is

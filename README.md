@@ -1,5 +1,7 @@
 # Project-G: Personal Genealogy Operations Platform
 
+> Current version: 2.0 | Instructions: see CLAUDE.md
+
 A personal, private web application for serious hobbyist genealogical research. Built for one user. Not a product. Not for distribution.
 
 Project-G is a working and documentation layer that sits alongside Ancestry.com and FamilyTreeMaker. It provides structured, GPS-compliant research tools that help an experienced hobbyist work with professional-grade methodology.
@@ -53,8 +55,8 @@ Project-G is a working and documentation layer that sits alongside Ancestry.com 
 
 ## Build Phases
 
-1. **Phase 1** — Documentation and architecture *(current)*
-2. **Phase 2** — Prototype artifacts in Claude.ai to test interview logic
+1. **Phase 1** — Documentation and architecture *(complete)*
+2. **Phase 2** — Prototype artifacts in Claude.ai to test interview logic *(active — current phase)*
 3. **Phase 3** — Full web app built module by module
 4. **Phase 4** — GEDCOM Bridge as onboarding layer
 5. **Phase 5** — Case Study Builder with PowerPoint export as flagship
