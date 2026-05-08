@@ -1,10 +1,13 @@
 # System Overview
 
+> **This document is a reference summary only.**
+> All operating instructions, rules, and versioning live in [CLAUDE.md](../CLAUDE.md).
+
 Project-G is a personal genealogy operations platform built for one user. It is not a research database or a tree — it is a working and documentation layer that operates alongside existing tools.
 
 ## Core Purpose
 
-The platform exists to bridge the gap between serious hobbyist genealogical research and professional-grade methodology. It enforces the Genealogical Proof Standard (GPS) in plain language, ensures every fact has a citation, and structures research in a way that produces defensible conclusions.
+The platform exists to bridge the gap between serious genealogical research and professional-grade methodology. It enforces the Genealogical Proof Standard (GPS) in plain language, ensures every fact has a citation, and structures research in a way that produces defensible conclusions. This platform supports the user's path toward BCG (Board for Certification of Genealogists) certification.
 
 ## Relationship to Existing Tools
 

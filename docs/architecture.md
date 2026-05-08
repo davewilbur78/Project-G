@@ -1,5 +1,8 @@
 # Architecture
 
+> **This document is a reference summary only.**
+> All operating instructions, rules, and versioning live in [CLAUDE.md](../CLAUDE.md).
+
 ## Stack Summary
 
 | Layer | Technology |
@@ -24,7 +27,7 @@ src/
 
 ## Database (Supabase)
 
-Supabase is the single source of truth. Core tables include:
+Supabase is the single source of truth for all person and source data. Core tables include:
 
 - `persons` — individuals in the research tree
 - `sources` — all sources, typed as Original/Derivative/Authored

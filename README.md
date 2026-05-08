@@ -1,10 +1,10 @@
 # Project-G: Personal Genealogy Operations Platform
 
-> Current version: 2.0 | Instructions: see CLAUDE.md
+> **Current version: 3.0.3** | Instructions: see [CLAUDE.md](CLAUDE.md) — the single source of truth
 
-A personal, private web application for serious hobbyist genealogical research. Built for one user. Not a product. Not for distribution.
+A personal, private web application for serious genealogical research. Built for one user. Not a product. Not for distribution.
 
-Project-G is a working and documentation layer that sits alongside Ancestry.com and FamilyTreeMaker. It provides structured, GPS-compliant research tools that help an experienced hobbyist work with professional-grade methodology.
+Project-G is a working and documentation layer that sits alongside Ancestry.com and FamilyTreeMaker. It provides structured, GPS-compliant research tools that help an experienced researcher work with professional-grade methodology toward BCG certification.
 
 ---
 
@@ -46,6 +46,7 @@ Project-G is a working and documentation layer that sits alongside Ancestry.com 
 
 ## Documentation
 
+- [CLAUDE.md](CLAUDE.md) — **single source of truth for all project instructions**
 - [System Overview](docs/system-overview.md)
 - [Architecture](docs/architecture.md)
 - [Module Design Docs](docs/modules/)
