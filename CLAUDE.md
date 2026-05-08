@@ -1,12 +1,21 @@
 Project-G CLAUDE.md
-Version: 3.0.3
-Last updated: 2026-05-07 UTC
+Version: 3.0.4
+Last updated: 2026-05-08 UTC
+
+FETCH METHOD: GitHub API only.
+https://api.github.com/repos/davewilbur78/Project-G/contents/CLAUDE.md
+The response is JSON. Decode the base64 content field to read this file.
+Never use raw.githubusercontent.com -- it is CDN-cached and unreliable.
 
 ## Operating Model
 
 This file is the single source of truth for Project-G.
 It lives in the GitHub repository at:
 https://github.com/davewilbur78/Project-G/blob/main/CLAUDE.md
+
+Claude fetches this file at session start using the GitHub API endpoint
+above. The API always returns the current committed version. CDN-based
+raw URLs must never be used for this fetch.
 
 The Claude.ai project instructions box contains only a
 pointer to this file. All actual instructions live here.
@@ -20,6 +29,41 @@ that changes this file.
 When Claude reads this file at the start of a conversation,
 it should confirm the version and date out loud so the
 user knows exactly which version is being used.
+
+## Session Mode
+
+Every session begins with mode selection. Claude must not
+proceed to any work until the user confirms the mode.
+
+After confirming the version and date out loud, Claude
+must ask:
+
+  What is the mode for this session?
+  BUILD   -- active prototyping or development
+  DEBUG   -- diagnosing system, process, or tooling problems
+  PLAN    -- architecture and design discussion only, no building
+  MODIFY  -- changing something that already exists
+  REVIEW  -- reading and evaluating existing work, no output
+  TEST    -- running or evaluating a prototype
+
+Claude waits for the user's response before doing anything else.
+Claude must never assume BUILD by default.
+
+## Unresolved: Mode System Design
+
+The mode framework above is a skeleton only. It was added
+in version 3.0.4 as a structural gate. The full design --
+including what each mode permits, what it restricts, and
+how Claude should behave differently in each -- has not
+yet been written.
+
+This must be resolved before the next BUILD session. In
+the next PLAN or MODIFY session after this commit, the
+first agenda item is completing the mode system design
+and updating this section.
+
+Do not remove this notice until the full mode design is
+written and committed.
 
 # Project-G: Personal Genealogy Operations Platform
 
@@ -216,18 +260,22 @@ Step 2: Draft CLAUDE.md changes if any.
 Step 3: Give git commands explicitly -- git add,
         git commit with message, git push.
 Step 4: Wait for commit hash confirmation.
-Step 5: Verify CLAUDE.md version header reached
-        GitHub by running:
-        curl -s https://raw.githubusercontent.com/davewilbur78/Project-G/main/CLAUDE.md | head -6
-        Confirm the version number matches before
-        closing the session.
+Step 5: Verify the commit reached GitHub by running:
+        curl -s "https://api.github.com/repos/davewilbur78/Project-G/contents/CLAUDE.md" \
+        | python3 -c "import sys,json,base64; \
+        d=json.load(sys.stdin); \
+        print(base64.b64decode(d['content']).decode()[:200])"
+        Confirm the version number in the output matches
+        the committed version before closing the session.
+        The API endpoint is never cached -- what you see
+        is what GitHub has.
 Step 6: Prototype files go to /prototypes/.
         Research docs go to /docs/research/.
         Both are required commits, not optional.
 
 Do not declare the session closed until the hash
 is confirmed AND the version header is verified
-via curl.
+via the API curl above.
 
 ## Versioning Convention
 
@@ -238,16 +286,16 @@ Semantic versioning: MAJOR.MINOR.PATCH
   significant new feature
 - MAJOR is reserved for the named product launch
 
-Current version: 3.0.3
+Current version: 3.0.4
 Claude Code decides which increment applies based
 on what was done in the session.
 
 ## Repository Structure
 
-/prototypes/         -- All HTML prototype files
-/docs/research/      -- All research output files
-/docs/modules/       -- Module design documents
-/src/                -- Application source code
+/prototypes/        -- All HTML prototype files
+/docs/research/     -- All research output files
+/docs/modules/      -- Module design documents
+/src/               -- Application source code
 
 ## Important Context
 
@@ -288,7 +336,12 @@ command. Never write files to any other directory.
 
 After every commit, verify the version header reached
 GitHub by running:
-curl -s https://raw.githubusercontent.com/davewilbur78/Project-G/main/CLAUDE.md | head -6
+curl -s "https://api.github.com/repos/davewilbur78/Project-G/contents/CLAUDE.md" \
+| python3 -c "import sys,json,base64; \
+d=json.load(sys.stdin); \
+print(base64.b64decode(d['content']).decode()[:200])"
 
-If the curl output does not match the committed version,
+If the output does not show the committed version number,
 do not close the session. Investigate and fix.
+Never use raw.githubusercontent.com for verification --
+it is CDN-cached and cannot be trusted for this purpose.
