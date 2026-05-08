@@ -1,5 +1,9 @@
 # Changelog
 
+> **Single source of truth:** CLAUDE.md is the only active instruction set for this project.
+> The current version is always in the header of CLAUDE.md. This changelog is a
+> historical record only. Nothing here overrides or supplements CLAUDE.md.
+
 ## 2026-05-07 -- Case Study Builder Prototype, Singer/Springer Research Session
 
 ### Session type
@@ -129,7 +133,9 @@ two must never be confused.
 - Begin Module 9 (Research Report Writer) prototype
   with two output modes.
 
-## [2.0] - 2026-05-07 UTC
+## [HISTORICAL] v2.0 -- 2026-05-07 UTC
+*This section documents the initial setup of the operating model.
+It is historical record only. CLAUDE.md is the single source of truth.*
 
 ### Operating Model Established
 - CLAUDE.md designated as single source of truth for all project instructions
@@ -146,10 +152,7 @@ two must never be confused.
 - README About section added
 - All 15 module docs audited and expanded
 
-## [Unreleased]
-- Phase 2 active: Case Study Builder prototype in development
-
-## [Phase 1 Complete]
+## [HISTORICAL] Phase 1 Complete
 - Full folder structure established
 - CLAUDE.md master reference created
 - README.md created
