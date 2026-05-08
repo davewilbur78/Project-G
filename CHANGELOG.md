@@ -4,6 +4,23 @@
 > The current version is always in the header of CLAUDE.md. This changelog is a
 > historical record only. Nothing here overrides or supplements CLAUDE.md.
 
+## v3.0.4 -- 2026-05-08 UTC
+
+### Changes
+- Fixed fetch method: CLAUDE.md must be fetched via the GitHub API endpoint
+  only. CDN-based raw.githubusercontent.com URLs are prohibited -- they are
+  cached and cannot be trusted to return the current committed version.
+- Added session mode gate: every session now begins with explicit mode
+  selection (BUILD / DEBUG / PLAN / MODIFY / REVIEW / TEST). Claude must not
+  proceed to work until the user confirms the mode. Default-to-BUILD behavior
+  is explicitly prohibited.
+- Removed CDN-based verification: session close protocol now requires
+  verification via the GitHub API curl command only. raw.githubusercontent.com
+  is never used for post-commit verification.
+- Added Unresolved notice: the mode system framework is a skeleton only.
+  Full design (per-mode permissions and behavioral rules) must be completed
+  in the next PLAN or MODIFY session.
+
 ## 2026-05-07 -- Case Study Builder Prototype, Singer/Springer Research Session
 
 ### Session type
