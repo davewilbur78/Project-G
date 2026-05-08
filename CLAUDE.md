@@ -1,6 +1,6 @@
 ---
 Project-G CLAUDE.md
-Version: 3.0.1
+Version: 3.0.3
 Last updated: 2026-05-07 UTC
 ---
 
