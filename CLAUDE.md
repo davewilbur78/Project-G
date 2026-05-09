@@ -3,6 +3,9 @@ Version: 3.0.4
 Last updated: 2026-05-08 UTC
 
 FETCH METHOD: GitHub API only.
+#this is your endpoint thing to make sure you can see and use the whole repo
+https://api.github.com/repos/davewilbur78/Project-G/git/trees/main?recursive=1
+and this is the api and file
 https://api.github.com/repos/davewilbur78/Project-G/contents/CLAUDE.md
 The response is JSON. Decode the base64 content field to read this file.
 Never use raw.githubusercontent.com -- it is CDN-cached and unreliable.
